@@ -1,0 +1,14 @@
+<!-- HTML page that includes the search functionality -->
+<html>
+    <body>
+        <div class="flex">
+                <input [(ngModel)]="searchQuery" type="text" placeholder="Search for a movie...  For example, try typing in 'Iron Man' " name="name" id="searchWidth">
+            <span> </span>
+                <button type="button" class="btn btn-primary" (click)="search()">Search</button>
+        </div>
+
+        <div>
+            <app-movie-list-helper *ngFor="let movie of movies" [movie]="movie"></app-movie-list-helper>
+        </div>
+    </body>
+</html>
